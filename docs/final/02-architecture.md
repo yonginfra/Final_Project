@@ -1,5 +1,12 @@
 # 구성과 기술 역할
 
+[![아이콘으로 정리한 최종 전체 구성도](../images/architecture.png)](../images/architecture.png)
+
+[원본 크기로 보기](../images/architecture.png) · [SVG 파일](../images/architecture.svg)
+
+그림은 현재 코드 구성을 나타냅니다. 왼쪽에서 접속과 두 AZ의 서브넷·EKS·DB 배치를 보고, 오른쪽에서 저장·비밀번호·관측 서비스를 확인합니다. 아래쪽은 주문 이메일과 승인 배포의 논리 흐름입니다. RDS 주/대기 AZ는 AWS 배치와 전환에 따라 바뀔 수 있으며, 앱별 AZ를 고정 배정한 그림은 아닙니다.
+
+
 ## 네트워크와 배치
 
 서울 리전의 두 AZ에 퍼블릭·프라이빗·DB 서브넷을 각각 배치합니다. 퍼블릭 구역에는 공유 ALB와 AZ별 NAT를, 프라이빗 구역에는 EKS 노드를 둡니다. RDS는 비공개로 구성하고 EKS 보안 그룹에서 MySQL 3306 접근을 허용합니다. EKS 관리 API는 내부 endpoint와 지정 공인 IP로 제한한 외부 endpoint를 사용합니다.

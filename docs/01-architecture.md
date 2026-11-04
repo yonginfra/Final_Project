@@ -8,9 +8,9 @@
 
 ## 전체 구성도
 
-![AWS EKS 프로젝트 구성도](images/architecture.png)
+![AWS EKS 프로젝트 구성도](images/architecture-legacy-20261015.png)
 
-[확대 가능한 SVG 원본](images/architecture.svg)
+[확대 가능한 SVG 원본](images/architecture-legacy-20261015.svg)
 
 ## 사용자가 홈페이지에 들어오면
 

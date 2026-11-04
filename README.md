@@ -26,6 +26,13 @@
 
 ## 전체 구성
 
+[![AWS EKS 전체 구성도](docs/images/architecture.png)](docs/images/architecture.png)
+
+[고해상도 PNG](docs/images/architecture.png) · [확대 가능한 SVG](docs/images/architecture.svg) · [구성도 읽는 방법](docs/final/02-architecture.md)
+
+<details>
+<summary>서비스 연결 흐름을 텍스트로 보기</summary>
+
 ```mermaid
 flowchart LR
     U[사용자] -->|HTTPS| A[공유 ALB / ACM]
@@ -48,6 +55,8 @@ flowchart LR
     L --> DDB[(DynamoDB 처리 기록)]
     Q -->|반복 실패 / 재시도 한도 초과| DLQ[SQS DLQ]
 ```
+
+</details>
 
 앱과 운영 도구는 EKS에 배치합니다. 위 그림은 서비스 흐름을 요약한 것이며 네트워크 경계를 모두 표시한 배치도는 아닙니다.
 
