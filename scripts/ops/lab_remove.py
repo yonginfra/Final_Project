@@ -167,7 +167,7 @@ def verify_deleted(runner, manifest, *, include_state=False):
     if hits:
         remaining['ebs'] = hits
     buckets = {b['Name'] for b in runner.aws('s3api', 'list-buckets')['Buckets']}
-    expected_buckets = {'final-product-images-021158485482-ap-northeast-2', 'final-cloudtrail-021158485482-ap-northeast-2', CONFIG['verifyBucket']}
+    expected_buckets = {'final-product-images-143710973003-ap-northeast-2', 'final-cloudtrail-143710973003-ap-northeast-2', CONFIG['verifyBucket']}
     if include_state:
         expected_buckets.add(STATE_BUCKET)
     if buckets & expected_buckets:
@@ -225,8 +225,8 @@ def verify_deleted(runner, manifest, *, include_state=False):
         logs = runner.aws('logs', 'describe-log-groups', '--log-group-name-prefix', prefix)['logGroups']
         if logs:
             remaining['logs:' + prefix] = [l['logGroupName'] for l in logs]
-    records = runner.aws('route53', 'list-resource-record-sets', '--hosted-zone-id', 'Z03158761YPLKM1NEY8PO')['ResourceRecordSets']
-    names = ('server.sy84.store.', 'argocd.sy84.store.', 'grafana.sy84.store.')
+    records = runner.aws('route53', 'list-resource-record-sets', '--hosted-zone-id', 'Z01939771EBX5SBI3T3FU')['ResourceRecordSets']
+    names = ('server.syong.store.', 'argocd.syong.store.', 'grafana.syong.store.')
     matching = [r['Name'] for r in records if any(r['Name'] == name or r['Name'].endswith('.' + name) for name in names)]
     if matching:
         remaining['dns'] = matching

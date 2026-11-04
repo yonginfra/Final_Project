@@ -248,7 +248,7 @@ class OperationalGuardsTests(unittest.TestCase):
 
     def test_unapproved_bucket_and_state_bucket_cannot_be_emptied(self):
         with patch.object(destroy, 'aws') as api:
-            for name in ('someone-else-bucket', 'final-tfstate-021158485482-ap-northeast-2'):
+            for name in ('someone-else-bucket', 'final-tfstate-143710973003-ap-northeast-2'):
                 with self.assertRaises(ValueError):
                     destroy.clear_bucket(name)
             api.assert_not_called()

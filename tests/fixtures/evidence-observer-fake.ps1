@@ -4,7 +4,7 @@ function global:aws {
     $global:LASTEXITCODE = 0
     $query = $args[1]
     switch ($query) {
-        'get-caller-identity' { return '{"Account":"021158485482"}' }
+        'get-caller-identity' { return '{"Account":"143710973003"}' }
         'describe-cluster' { return '{"cluster":{"resourcesVpcConfig":{"vpcId":"vpc-demo"}}}' }
         'describe-subnets' { return '{"Subnets":[{"SubnetId":"pub-a","AvailabilityZone":"ap-northeast-2a"},{"SubnetId":"pub-c","AvailabilityZone":"ap-northeast-2c"}]}' }
         'describe-nat-gateways' { return '{"NatGateways":[{"NatGatewayId":"nat-a","SubnetId":"pub-a","State":"available"},{"NatGatewayId":"nat-c","SubnetId":"pub-c","State":"available"}]}' }
@@ -15,7 +15,7 @@ function global:aws {
 }
 function global:kubectl {
     $global:LASTEXITCODE = 0
-    if ($args[0] -eq 'config') { return 'arn:aws:eks:ap-northeast-2:021158485482:cluster/Final-eks' }
+    if ($args[0] -eq 'config') { return 'arn:aws:eks:ap-northeast-2:143710973003:cluster/Final-eks' }
     switch ($args[1]) {
         'application' { return '{"status":{"sync":{"revision":"abc","status":"Synced"},"health":{"status":"Healthy"}}}' }
         'deployment' { return '{"metadata":{"generation":2},"spec":{"replicas":2,"template":{"spec":{"containers":[{"image":"frontend@sha256:demo"}]}}},"status":{"observedGeneration":2,"updatedReplicas":2,"readyReplicas":2,"availableReplicas":2}}' }

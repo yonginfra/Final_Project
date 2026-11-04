@@ -25,7 +25,7 @@ def check(root=ROOT):
     # Reject a partial domain conversion, rather than silently deploy split DNS.
     ingress=(root/'app/msa/k8s/ingress.yml')
     if not ingress.exists():
-        ingress=next(p for p in (root/'app/msa').rglob('*.y*ml') if 'host: server.sy84.store' in p.read_text(encoding='utf-8-sig'))
+        ingress=next(p for p in (root/'app/msa').rglob('*.y*ml') if 'host: server.syong.store' in p.read_text(encoding='utf-8-sig'))
     if config['websiteHost'] not in ingress.read_text(encoding='utf-8-sig'):
         raise ValueError('Application Ingress/shared website hostname mismatch')
     return config

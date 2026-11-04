@@ -1,4 +1,4 @@
-﻿# AWS 생성 및 kubeconfig 연결 후 실행: Terraform에 전달할 값만 준비
+# AWS 생성 및 kubeconfig 연결 후 실행: Terraform에 전달할 값만 준비
 # 파일에 비밀번호를 저장하거나 Terraform apply를 실행하지 않음
 [CmdletBinding()]
 param([switch]$PrivateRepository)
@@ -6,7 +6,7 @@ $ErrorActionPreference = 'Stop'
 
 # JWT 키를 조회할 클러스터가 프로젝트 EKS인지 확인
 $context = & kubectl config current-context
-if ($LASTEXITCODE -ne 0 -or $context -ne 'arn:aws:eks:ap-northeast-2:021158485482:cluster/Final-eks') {
+if ($LASTEXITCODE -ne 0 -or $context -ne 'arn:aws:eks:ap-northeast-2:143710973003:cluster/Final-eks') {
     throw '먼저 Final-eks의 기본 kubeconfig 컨텍스트를 연결하세요.'
 }
 

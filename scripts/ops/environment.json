@@ -1,19 +1,19 @@
 {
-  "account": "021158485482",
+  "account": "143710973003",
   "profile": "eks-user",
   "region": "ap-northeast-2",
   "cluster": "Final-eks",
   "namespace": "soldesk",
-  "url": "https://server.sy84.store",
-  "repository": "yobi84-sy/aws-msa-final-test2",
+  "url": "https://server.syong.store",
+  "repository": "yonginfra/Final_Project",
   "loadBalancer": "final-shared-alb",
   "database": "final-ordermsa-db",
   "project": "Final",
-  "stateBucket": "final-tfstate-021158485482-ap-northeast-2",
+  "stateBucket": "final-tfstate-143710973003-ap-northeast-2",
   "verifyProject": "Final-deploy-verify",
-  "verifyBucket": "final-deploy-verify-021158485482-ap-northeast-2",
-  "hostedZoneId": "Z03158761YPLKM1NEY8PO",
-  "websiteHost": "server.sy84.store",
-  "argoHost": "argocd.sy84.store",
-  "grafanaHost": "grafana.sy84.store"
+  "verifyBucket": "final-deploy-verify-143710973003-ap-northeast-2",
+  "hostedZoneId": "Z01939771EBX5SBI3T3FU",
+  "websiteHost": "server.syong.store",
+  "argoHost": "argocd.syong.store",
+  "grafanaHost": "grafana.syong.store"
 }

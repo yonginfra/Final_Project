@@ -8,11 +8,11 @@ terraform {
 provider "aws" {
   region              = "ap-northeast-2"
   profile             = "eks-user"
-  allowed_account_ids = ["021158485482"]
+  allowed_account_ids = ["143710973003"]
 }
 variable "state_bucket_name" {
   type    = string
-  default = "final-tfstate-021158485482-ap-northeast-2"
+  default = "final-tfstate-143710973003-ap-northeast-2"
 }
 resource "aws_s3_bucket" "state" {
   bucket        = var.state_bucket_name

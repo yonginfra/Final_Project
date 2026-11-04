@@ -11,6 +11,6 @@ spec:
   issuerRef:
     name: my-issuer
     kind: ClusterIssuer
-  commonName: argo.sy84.store
+  commonName: argo.syong.store
   dnsNames:
-  - argo.sy84.store
+  - argo.syong.store

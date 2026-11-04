@@ -1,4 +1,4 @@
-﻿# 현재 PC의 비밀이 아닌 실행값만 준비합니다. AWS 리소스 변경과 apply는 하지 않습니다.
+# 현재 PC의 비밀이 아닌 실행값만 준비합니다. AWS 리소스 변경과 apply는 하지 않습니다.
 [CmdletBinding()]
 param()
 $ErrorActionPreference = 'Stop'
@@ -6,7 +6,7 @@ $root = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
 $target = Join-Path $root 'terraform/terraform.tfvars'
 if (Test-Path -LiteralPath $target) { throw 'terraform.tfvars가 이미 있습니다. 기존 값을 검토하고 보존하세요.' }
 $arn = Read-Host 'EKS 관리자 IAM user/role ARN (sts assumed-role ARN 아님)'
-if ($arn -notmatch '^arn:aws:iam::021158485482:(user|role)/[A-Za-z0-9+=,.@_/-]+$') { throw '계정 021158485482의 IAM ARN이 필요합니다.' }
+if ($arn -notmatch '^arn:aws:iam::143710973003:(user|role)/[A-Za-z0-9+=,.@_/-]+$') { throw '계정 143710973003의 IAM ARN이 필요합니다.' }
 $address = (Invoke-RestMethod 'https://checkip.amazonaws.com').Trim()
 $ip = [Net.IPAddress]::Parse($address)
 if ($ip.AddressFamily -ne [Net.Sockets.AddressFamily]::InterNetwork) { throw '이 가이드에는 IPv4 공인 주소가 필요합니다.' }

@@ -1,3 +1,5 @@
+> **과거 앱 기능 기록:** 아래에는 SNS 직접 알림 등 이전 구현 설명이 포함됩니다. 현재 통합 구성은 [최종 기술 역할](../../docs/final/02-architecture.md)과 [배포 안내](../../docs/final/03-deployment.md)를 확인하세요.
+
 > **test2 변경:** 주문 요청에 Idempotency-Key가 필요하고 응답은 상태 JSON입니다. DB Secret 분리와 내부 키도 필요합니다. [새 적용 안내](../../docs/11-test2-delivery.md)를 먼저 읽으세요.
 
 # 간단한 스토어 기능 추가

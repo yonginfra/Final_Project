@@ -1,4 +1,4 @@
-# 기존 sy84.store 공개 호스팅 영역 조회: 새 영역을 만들지 않음
+# 기존 syong.store 공개 호스팅 영역 조회: 새 영역을 만들지 않음
 data "aws_route53_zone" "website" {
   zone_id = local.environment.hostedZoneId
 }

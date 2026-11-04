@@ -14,7 +14,7 @@ import time
 from verify_lab import CONFIG, aws, check, kube
 
 REPOS = ('member-service', 'product-service', 'ordering-service', 'apigateway', 'frontend-service')
-BUCKETS = ('final-product-images-021158485482-ap-northeast-2', 'final-cloudtrail-021158485482-ap-northeast-2', CONFIG['verifyBucket'])
+BUCKETS = ('final-product-images-143710973003-ap-northeast-2', 'final-cloudtrail-143710973003-ap-northeast-2', CONFIG['verifyBucket'])
 
 
 def command(*args):
@@ -114,7 +114,7 @@ def clear_bucket(bucket):
 
 
 def storage():
-    trail = 'arn:aws:cloudtrail:ap-northeast-2:021158485482:trail/Final-management-trail'
+    trail = 'arn:aws:cloudtrail:ap-northeast-2:143710973003:trail/Final-management-trail'
     # Exact trail ARN is also checked against Terraform output by the guide before execution.
     trails = aws('cloudtrail', 'describe-trails')['trailList']
     if any(t['TrailARN'] == trail for t in trails):

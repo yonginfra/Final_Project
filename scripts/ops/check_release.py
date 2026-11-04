@@ -40,7 +40,7 @@ def http_checks(base):
                 if not isinstance(data,list) or any(not isinstance(p,dict) or not all(k in p for k in ('id','name','price','stockQuantity')) for p in data):raise ValueError('Invalid product API contract')
 def main():
     import yaml
-    p=argparse.ArgumentParser();p.add_argument('--revision',required=True);p.add_argument('--url',default='https://server.sy84.store');p.add_argument('--timeout',type=int,default=600)
+    p=argparse.ArgumentParser();p.add_argument('--revision',required=True);p.add_argument('--url',default='https://server.syong.store');p.add_argument('--timeout',type=int,default=600)
     p.add_argument('--manifest-ref',help='검증할 선언의 immutable Git SHA. 로컬 checkout을 수정하지 않습니다.')
     args=p.parse_args()
     if args.manifest_ref:

@@ -1,7 +1,7 @@
-﻿# 관리자 비밀번호를 Git에 저장하지 않고 Kubernetes Secret으로 준비한다.
+# 관리자 비밀번호를 Git에 저장하지 않고 Kubernetes Secret으로 준비한다.
 $ErrorActionPreference = 'Stop'
 $context = kubectl config current-context
-if ($LASTEXITCODE -ne 0 -or $context -ne 'arn:aws:eks:ap-northeast-2:021158485482:cluster/Final-eks') {
+if ($LASTEXITCODE -ne 0 -or $context -ne 'arn:aws:eks:ap-northeast-2:143710973003:cluster/Final-eks') {
     throw 'Final-eks 클러스터에 연결한 PowerShell에서 실행하세요.'
 }
 $adminEmail = (Read-Host '관리자 이메일 (SES 샌드박스에서는 인증된 수신 주소)').Trim()

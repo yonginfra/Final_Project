@@ -1,7 +1,11 @@
 {
-  "repository": "yobi84-sy/aws-msa-final-test2",
-  "owner": "yobi84-sy",
-  "collaborators": ["yunjun1208", "yonginfra", "yjeee-ghub"],
+  "repository": "yonginfra/Final_Project",
+  "owner": "yonginfra",
+  "collaborators": [
+    "yobi84-sy",
+    "yunjun1208",
+    "yjeee-ghub"
+  ],
   "permission": "push",
   "requiredOtherApprovals": 1
 }

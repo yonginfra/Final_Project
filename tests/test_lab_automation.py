@@ -26,7 +26,7 @@ import lab_verify as verify
 SHA = 'a' * 40
 RELEASE = 'b' * 40
 SETTINGS = {'schema': 1, 'account': common.CONFIG['account'],
-            'adminArn': 'arn:aws:iam::021158485482:user/unit-test',
+            'adminArn': 'arn:aws:iam::143710973003:user/unit-test',
             'alertEmail': 'alerts@example.com', 'senderEmail': 'sender@example.com',
             'testRecipientEmail': 'buyer@example.com', 'adminEmail': 'operator@example.com'}
 
@@ -41,7 +41,7 @@ class FakeInstallRunner:
     def tf(self, root, *args):
         self.calls.append(('tf', root, args))
         if args[:2] == ('output', '-json'):
-            return json.dumps('arn:aws:iam::021158485482:role/Final-github-actions-ecr-role')
+            return json.dumps('arn:aws:iam::143710973003:role/Final-github-actions-ecr-role')
         return ''
     def run(self, args, **kwargs):
         self.calls.append(tuple(args))
